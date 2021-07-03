@@ -1,0 +1,15 @@
+.art-cont {
+    margin: 50px 0;
+    width: 96%;
+    padding: 0 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 500px;
+}
+
+@media (max-width: 768px) {
+    .art-cont {
+        justify-content: center;
+    }
+}

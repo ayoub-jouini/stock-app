@@ -1,0 +1,19 @@
+.art-body {
+    height: 80%;
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.art-data {
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-icon img {
+    width: 20px;
+    height: 20px;
+    float: right;
+}
