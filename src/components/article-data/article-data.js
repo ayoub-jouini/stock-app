@@ -1,4 +1,3 @@
-import React from 'react';
 import './article-data.css';
 
 const ArticleData = (props) => {

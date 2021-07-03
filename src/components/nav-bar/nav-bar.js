@@ -1,7 +1,7 @@
 import React from 'react';
 import "./nav-bar.css";
 
-const NavBar = () => {
+const NavBar = ({ setArtData }) => {
 
     return (
         <nav>
@@ -9,7 +9,7 @@ const NavBar = () => {
                 <h1>STOCKTN</h1>
             </div>
             <div className="searchBar">
-                <input type="text" placeholder="search" className="search-input" />
+                <input type="text" placeholder="search" className="search-input" onChange={event => { setArtData(event.target.value) }} />
             </div>
             <div className="nouveau">
                 nouvel article +

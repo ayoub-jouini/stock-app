@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './article-body.css';
 import ArticleData from '../article-data/article-data';
 
 const ArticleBody = (props) => {
 
-    const [name, setName] = useState(["Code", "Quantiter", "Zone"]);
+    const [name] = useState(["Code", "Quantiter", "Zone"]);
     return (
         <div className="art-body">
             <ArticleData

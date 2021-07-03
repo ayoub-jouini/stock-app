@@ -1,4 +1,3 @@
-import React from 'react';
 import './add-btn.css';
 
 const AddBtn = () => {

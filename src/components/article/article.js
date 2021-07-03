@@ -1,4 +1,3 @@
-import React from 'react';
 import './article.css'
 import ArticleBody from '../article-body/article-body';
 
