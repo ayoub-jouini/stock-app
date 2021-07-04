@@ -1,6 +1,7 @@
 [
     {
         "id": 0,
+        "category": "build",
         "name": "louh",
         "code": "#4568",
         "qte": "7896",
@@ -8,6 +9,7 @@
     },
     {
         "id": 1,
+        "category": "build",
         "name": "msamer",
         "code": "#1234",
         "qte": "7842",
@@ -15,6 +17,7 @@
     },
     {
         "id": 2,
+        "category": "build",
         "name": "hdid",
         "code": "#896",
         "qte": "235",
@@ -22,6 +25,7 @@
     },
     {
         "id": 3,
+        "category": "build",
         "name": "yejour",
         "code": "#1456",
         "qte": "7896",
@@ -29,6 +33,7 @@
     },
     {
         "id": 4,
+        "category": "build",
         "name": "simen",
         "code": "#q452",
         "qte": "800",
