@@ -10,7 +10,7 @@ const ArticleContrainer = ({ artData }) => {
             {Data.filter((data) => {
                 if (artData === '') {
                     return data
-                } else if (data.name.toLowerCase().includes(artData.toLowerCase())) {
+                } else if ((data.name.toLowerCase().includes(artData.toLowerCase())) || (data.code.includes(artData))) {
                     return data
                 }
             }).map(data =>
