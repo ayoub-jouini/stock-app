@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 const ArticleContrainer = ({ artData }) => {
     const [data, setData] = useState([]);
+    const [error, setError] = useState(null);
     async function getData() {
         const response = await fetch('Data.json'
             , {
@@ -21,8 +22,9 @@ const ArticleContrainer = ({ artData }) => {
 
     }
     useEffect(() => {
-        getData().then((response) => setData(response));
+        getData().then((response) => setData(response)).catch((e) => setError(e));
     }, [])
+    if (error) throw error;
     return (
         <div className="art-cont">
             {data && data.length > 0 && data.filter((d) => {
