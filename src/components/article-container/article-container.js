@@ -2,6 +2,7 @@ import './article-container.css';
 import Article from '../article/article';
 import AddBtn from '../add-btn/add-btn';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const ArticleContrainer = ({ artData }) => {

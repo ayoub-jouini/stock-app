@@ -5,22 +5,25 @@ import Footer from './components/footer/footer';
 import { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PageTwo from './components/page-2/page-2'
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
 
   const [artData, setArtData] = useState('');
   return (
     <div className="App">
-      <NavBar setArtData={setArtData} />
-      <Switch>
-        <Route path="/pagetwo">
-          <PageTwo />
-        </Route>
-        <Route path="/">
-          <ArticleContrainer artData={artData} />
-        </Route>
-      </Switch>
-      <Footer />
+      <ErrorBoundary>
+        <NavBar setArtData={setArtData} />
+        <Switch>
+          <Route path="/pagetwo">
+            <PageTwo />
+          </Route>
+          <Route path="/">
+            <ArticleContrainer artData={artData} />
+          </Route>
+        </Switch>
+        <Footer />
+      </ErrorBoundary>
     </div>
   );
 }
