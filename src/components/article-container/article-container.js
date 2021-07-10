@@ -4,31 +4,11 @@ import AddBtn from '../add-btn/add-btn';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoadingSpinner from '../loading-spinner/LoadingSpiner';
+import useFetch from '../../services/useFetch';
 
 
 const ArticleContrainer = ({ artData }) => {
-    const [data, setData] = useState([]);
-    const [error, setError] = useState(null);
-    const [loading, setLoading] = useState(true);
-    async function getData() {
-        const response = await fetch('Data.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
-        )
-        if (response.ok) return response.json();
-        throw response;
-
-    }
-    useEffect(() => {
-        getData()
-            .then((response) => setData(response))
-            .catch((e) => setError(e))
-            .finally(() => setLoading(false));
-    }, [])
+    const { data, error, loading } = useFetch('Data.json');
     if (error) throw error;
     if (loading) return <LoadingSpinner />
     return (
