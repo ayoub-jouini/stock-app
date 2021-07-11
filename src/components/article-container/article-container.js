@@ -3,10 +3,12 @@ import Article from '../article/article';
 import AddBtn from '../add-btn/add-btn';
 import LoadingSpinner from '../loading-spinner/LoadingSpiner';
 import useFetch from '../../services/useFetch';
+import { Link, useParams } from 'react-router-dom';
 
 
 const ArticleContrainer = ({ artData }) => {
     const { data, error, loading } = useFetch('Data.json');
+    const { category, id } = useParams();
     if (error) throw error;
     if (loading) return <LoadingSpinner />
     return (
@@ -18,12 +20,15 @@ const ArticleContrainer = ({ artData }) => {
                     return d
                 }
             }).map(d =>
-                <Article
-                    key={d.id}
-                    name={d.name}
-                    code={d.code}
-                    qte={d.qte}
-                    zone={d.zone} />
+                <Link to={`/${category}/${id}`}>
+                    <Article
+                        key={d.id}
+                        name={d.name}
+                        code={d.code}
+                        qte={d.qte}
+                        zone={d.zone} />
+                </Link>
+
             )}
 
             <AddBtn />

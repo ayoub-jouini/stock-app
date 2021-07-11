@@ -6,7 +6,7 @@ import PageTwo from '../page-2/page-2'
 const AppBody = ({ artData }) => {
     return (
         <Switch>
-            <Route path="/pagetwo">
+            <Route path="/:category/:id">
                 <PageTwo />
             </Route>
             <Route path="/">
