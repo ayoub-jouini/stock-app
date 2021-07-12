@@ -15,7 +15,7 @@ const DetailsBody = ({ name, code, qte, zone }) => {
                 <div className="name">
                     {name}
                 </div>
-                <div className="edit-icon">
+                <div className="edit-icon-d">
                     <img alt="edit-btn" src="/asset/edit.svg" />
                 </div>
             </div>
