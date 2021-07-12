@@ -20,9 +20,9 @@ const ArticleContrainer = ({ artData }) => {
                     return d
                 }
             }).map(d =>
-                <Link to={`/${d.category}/${d.id}`}>
+                <Link to={`/${d.category}/${d.id}`} key={d.id}>
                     <Article
-                        key={d.id}
+
                         name={d.name}
                         code={d.code}
                         qte={d.qte}
